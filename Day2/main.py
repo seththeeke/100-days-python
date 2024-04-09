@@ -44,7 +44,8 @@ Boolean - True or False values
 # weeks_remaining = 4000 - (age*52)
 # print(f"You have {weeks_remaining} weeks left in your life")
 
-# Day 2 Project - Tip Calculator - Given a total bill, the desired tip percentage, and the number of people, output the total amount each person pays
+# Day 2 Project - Tip Calculator - Given a total bill, the desired tip percentage, and the number of people,
+# output the total amount each person pays
 bill_amount = float(input("What is the bill amount? "))
 desired_tip_percentage = float(input("What is the desired tip percentage? "))
 people_split = int(input("How many people do you want to split the bill? "))
