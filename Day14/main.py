@@ -34,3 +34,5 @@ while correct_answer:
     print(f"The number of followers were {rand_a}: {game_data[rand_a]} and {rand_b}: {game_data[rand_b]}")
 
 print(f"Game over, you got {num_correct} correct answers.")
+
+
