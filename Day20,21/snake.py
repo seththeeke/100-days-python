@@ -1,5 +1,6 @@
 from turtle import Turtle
 
+
 class Snake:
     def __init__(self):
         self.snake_segments = []
@@ -13,7 +14,7 @@ class Snake:
             segment = Turtle(shape="square")
             segment.color("white")
             segment.penup()
-            segment.goto(i*20, 0)
+            segment.goto(i * 20, 0)
             segment.xcor()
             segment.speed(1)
             self.snake_segments.append(segment)
@@ -43,5 +44,14 @@ class Snake:
         segment.color("white")
         segment.penup()
         segment.speed(1)
-        segment.teleport(back_segment.xcor()-20, back_segment.xcor()-20)
+        segment.teleport(back_segment.xcor() + 20, back_segment.xcor())
         self.snake_segments.append(segment)
+
+    def is_collided_with_self(self):
+        for index in range(1, len(self.snake_segments) - 1):
+            if self.snake_segments[index].xcor() == self.xcor and self.snake_segments[index].ycor() == self.ycor:
+                return True
+        return False
+
+    def get_length(self):
+        return len(self.snake_segments) - 3
